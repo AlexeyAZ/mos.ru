@@ -1,0 +1,126 @@
+.input-container {
+	border: 1px solid $border;
+	border-radius: 4px;
+	position: relative;
+	height: 58px;
+
+	&_error {
+		border: 1px solid $main-red;
+	}
+
+	&_focus {
+		border-color: $border-active;
+	}
+
+	&_password_show {
+
+		.input__btn-icon_close {
+			display: none;
+		}
+
+		.input__btn-icon_show {
+			display: block;
+		}
+	}
+
+	&_require {
+
+		&:before {
+			content: "*";
+			display: inline-block;
+			color: $main-red;
+			font-size: 30px;
+			line-height: 0.7em;
+			margin-top: -0.2em; 
+			position: absolute;
+			top: 50%;
+			right: -30px;
+
+			@include media(w428) {
+				right: -22px;
+			}
+		}
+	}
+
+	&_text_true {
+		
+		.input__label-text {
+			font-size: 12px;
+			margin-top: 0;
+			top: 8px;
+		}
+	}
+}
+.input {
+	background-color: transparent;
+	border: none;
+	border-radius: 4px;
+	outline: none;
+	display: inline-block;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	padding: 1.4em 20px 0;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+
+	&__label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 0;
+	}
+
+	&__label-text {
+		transition: $trans;
+		color: $main-text-gray;
+		line-height: 1.2em;
+		margin-top: -0.6em;
+		padding: 0 20px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+	}
+
+	&__btn {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		z-index: 3;
+
+		&_show {
+			right: 0;
+			width: 50px;
+		}
+	}
+
+	&__btn-icon {
+		margin-top: -6px;
+		margin-left: -13px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 26px;
+
+		&_show {
+			display: none;
+			margin-top: -10px;
+		}
+	}
+
+	&:focus {
+
+		& + .input__label {
+
+			.input__label-text {
+				font-size: 12px;
+				margin-top: 0;
+				top: 8px;
+			}
+		}
+	}
+}

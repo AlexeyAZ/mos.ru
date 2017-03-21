@@ -1,0 +1,10 @@
+.content {
+	background-image: linear-gradient(to right bottom, $bg-top-left, $bg-bottom-right);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#866ed8, endColorstr=#2328ae);
+	overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}

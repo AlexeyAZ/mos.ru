@@ -1,0 +1,61 @@
+.load-photo {
+	display: none;
+
+	& + .load-photo__label {
+
+	}
+
+	&__label {
+		background-color: $main-yellow;
+		border-radius: 6px 6px 0 6px;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		margin-right: -38px;
+		position: relative;
+		height: 150px;
+
+		&:before {
+			content: "";
+			background-color: $main-brown;
+			border-radius: 0 0 6px 0;
+			position: absolute;
+			right: 0;
+			bottom: -8px;
+			height: 8px;
+			width: 8px;
+		}
+	}
+
+	&__border {
+		display: block;
+		position: relative;
+		height: 100%;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		&:after {
+			content: "";
+			border-radius: 6px;
+			border: 2px dotted white;
+			position: absolute;
+			top: 12%;
+			left: 8%;
+			height: 76%;
+			width: 84%;
+		}
+	}
+
+	&__text {
+		color: white;
+		display: inline-block;
+		text-transform: uppercase;
+		vertical-align: middle;
+		font-weight: 500;
+	}
+}

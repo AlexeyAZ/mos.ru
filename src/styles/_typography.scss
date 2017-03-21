@@ -1,0 +1,12 @@
+.heading {
+	font-weight: bold;
+	padding-bottom: 0.5em;
+
+	@include media(w428) {
+		text-align: center;
+	}
+
+	&_l {
+		font-size: 26px;
+	}
+}

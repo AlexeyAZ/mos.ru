@@ -1,0 +1,90 @@
+.switch-container {
+	text-align: center;
+}
+
+.switch {
+	display: none;
+
+	& + .switch__label {
+
+		.switch__block {
+
+			&:before {
+				transition: $trans;
+				content: "";
+				background-color: $switch;
+				border-radius: 50%;
+				margin-top: -12px;
+				position: absolute;
+				left: 3px;
+				top: 50%;
+				height: 24px;
+				width: 24px;
+			}
+		}
+	}
+
+	&:checked {
+
+		& + .switch__label {
+
+			.switch__block {
+
+				&:before {
+					left: 27px;
+				}
+			}
+
+			.switch__option_male {
+				color: black;
+			}
+
+			.switch__option_female {
+				color: $switch;
+			}
+		}
+	}
+
+	&__label {
+		display: inline-block;
+	}
+
+	&__block {
+		border: 1px solid $border;
+		border-radius: 27px;
+		cursor: pointer;
+		display: inline-block;
+		margin: 0 12px;
+		position: relative;
+		vertical-align: middle;
+		height: 30px;
+		width: 54px;
+
+		@include media(w768) {
+			margin: 12px;
+		}
+
+		@include media(w428) {
+			margin: 0 12px;
+		}
+	}
+
+	&__option {
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 500;
+
+		@include media(w768) {
+			width: 100%;
+		}
+
+		@include media(w428) {
+			width: auto;
+		}
+
+		&_male {
+			color: $switch;
+		}
+	}
+}

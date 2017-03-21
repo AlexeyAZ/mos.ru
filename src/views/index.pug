@@ -1,0 +1,75 @@
+extends templates/layout
+
+block vars
+    - var title = 'Main'
+
+block content
+    div.content
+        div.form-container
+            form#form.form
+                div.form__col.form__col_left
+                    h2.heading.heading_l.
+                        Ваши данные
+                    div.input-container.input-container_require.form__input-container
+                        input.input.js-input-text(type="text" name="name" id="inputName" placeholder="").form__input
+                        label.input__label(for="inputName").form__input-label
+                            span.input__label-text.
+                                Введите Ф.И.О.
+                    div.input-container.input-container_require.form__input-container
+                        input.input.js-input-text(type="password" name="password" id="inputPassword" placeholder="").form__input
+                        label.input__label(for="inputPassword").form__input-label
+                            span.input__label-text.
+                                Пароль
+                        div.input__btn.input__btn_show.js-show-password-btn
+                            img.input__btn-icon.input__btn-icon_close(src="img/closed-eye.svg", alt="")
+                            img.input__btn-icon.input__btn-icon_show(src="img/opened-eye.svg", alt="")
+                    div.input-container.input-container_require.form__input-container
+                        input.input.js-input-text(type="email" name="email" id="inputEmail" placeholder="").form__input
+                        label.input__label(for="inputEmail").form__input-label
+                            span.input__label-text.
+                                Email
+                    div.select-container
+                        select.select
+                            option(value="moskow").
+                                Москва
+                            option(value="snt.p").
+                                Санкт-Петербург
+                            option(value="kazan").
+                                Казань 
+                    div.input-container.form__input-container
+                        input.input.js-input-text.js-input-phone(type="tel" name="phone" id="inputPhone" placeholder="").form__input
+                        label.input__label(for="inputPhone").form__input-label
+                            span.input__label-text.
+                                Телефон
+                    div.switch-container
+                        input.switch(type="checkbox" id="switchGender")
+                        label(for="switchGender").switch__label
+                            span.switch__option.switch__option_male.
+                                Я - парень
+                            span.switch__block
+                            span.switch__option.switch__option_female.
+                                Я - девушка
+                div.form__col.form__col_right
+                    h2.heading.heading_l.
+                        Важно знать
+                    div.form__important
+                        img(src="img/img.svg", alt="").form__important-img
+                        ul.form__list
+                            li.form__list-item.
+                                Развивайтесь не смотря ни на что
+                            li.form__list-item.
+                                Не повторяйте за тем, кто повторяет
+                    div.form__load-photo
+                        input.load-photo.js-load-photo(name="photo" type="file" id="loadPhoto")
+                        label.load-photo__label(for="loadPhoto")
+                            span.load-photo__border
+                                span.load-photo__text.
+                                    загрузить фото
+                    div.form__checkbox
+                        input.checkbox.js-checkbox(name="rule" type="checkbox" id="rule")
+                        label.checkbox__label(for="rule")
+                            span.checkbox__label-icon
+                            span.checkbox__label-text.
+                                Я прочитал и соглашаюсь с <a class="" href="">правилами</a> участия в акции.
+                    button.btn-round.
+                        участвовать
